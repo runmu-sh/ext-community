@@ -1,0 +1,11 @@
+{
+  "$comment": "Client.Community.Kudos: one player thanked another.",
+  "type": "object",
+  "required": ["receiver"],
+  "properties": {
+    "giver": { "type": "string" },
+    "receiver": { "type": "string" },
+    "message": { "type": "string" },
+    "anonymous": { "type": "boolean" }
+  }
+}

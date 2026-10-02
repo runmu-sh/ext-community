@@ -1,0 +1,10 @@
+{
+  "$comment": "Client.Community.Event: any other community moment; kind is the toast's title.",
+  "type": "object",
+  "required": ["kind"],
+  "properties": {
+    "kind": { "type": "string" },
+    "text": { "type": "string" },
+    "message": { "type": "string" }
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "name": "@runmu.sh/ext-community",
+  "version": "1.0.0",
+  "description": "Kudos, milestones and other community moments from your game, as toasts (GMCP Client.Community).",
+  "keywords": [
+    "community",
+    "kudos",
+    "milestone",
+    "toast",
+    "gmcp"
+  ],
+  "license": "MIT",
+  "homepage": "https://runmu.sh/marketplace/x/community",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/runmu-sh/ext-community.git"
+  },
+  "bugs": {
+    "url": "https://github.com/runmu-sh/ext-community/issues"
+  },
+  "type": "module",
+  "exports": "./dist/index.js",
+  "types": "./src/types.ts",
+  "files": [
+    "dist",
+    "schema",
+    "src/types.ts",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "dev": "node scripts/dev.mjs",
+    "typecheck": "tsc --noEmit",
+    "check": "node scripts/build.mjs --check",
+    "test": "node --test test/*.test.mjs"
+  },
+  "devDependencies": {
+    "@muclient/sdk": "npm:@runmu.sh/sdk@^1.12.0",
+    "@runmu.sh/dev": "^0.2.0",
+    "esbuild": "^0.28.2",
+    "typescript": "^5.9.0"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "muclient": {
+    "id": "community",
+    "api": "^1.12",
+    "source": "src/index.ts",
+    "displayName": "Community",
+    "description": "Kudos, milestones and other community moments from your game, as toasts (GMCP Client.Community).",
+    "categories": [
+      "communication",
+      "interface"
+    ],
+    "contributes": {
+      "gmcp": [
+        {
+          "package": "Client.Community 1",
+          "messages": {
+            "Client.Community.Kudos": {
+              "dir": "in",
+              "schema": "schema/kudos.json"
+            },
+            "Client.Community.Milestone": {
+              "dir": "in",
+              "schema": "schema/milestone.json"
+            },
+            "Client.Community.Event": {
+              "dir": "in",
+              "schema": "schema/event.json"
+            }
+          }
+        }
+      ]
+    },
+    "capabilities": [
+      "read-output"
+    ],
+    "publisher": "bitmuse"
+  }
+}

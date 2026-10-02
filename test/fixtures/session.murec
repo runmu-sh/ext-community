@@ -1,0 +1,13 @@
+{
+  "format": "murec",
+  "version": 1,
+  "started": "2026-10-02T00:00:00.000Z",
+  "duration": 900,
+  "redacted": { "char": true, "loginPackages": true, "credentials": true },
+  "events": [
+    { "t": 0, "seq": 1, "k": "line", "text": "The Market Spire hums with voices.", "kind": "output" },
+    { "t": 100, "seq": 2, "k": "gmcp", "pkg": "Client.Community.Kudos", "data": { "giver": "Vessa", "receiver": "Ivo", "message": "for the tour" } },
+    { "t": 400, "seq": 3, "k": "gmcp", "pkg": "Client.Community.Milestone", "data": { "label": "1000 scenes logged" } },
+    { "t": 900, "seq": 4, "k": "gmcp", "pkg": "Client.Community.Event", "data": { "kind": "community_spotlight", "text": "Ivo's scene is in the spotlight" } }
+  ]
+}
